@@ -1,0 +1,31 @@
+
+<h1 class="title" >Gallery</h1>
+
+<div class="lightbox-example" *ngIf="Open_gallery_display">
+	<button  class="btn btn-primary"  (click)="lightbox">Open Gallery</button>
+	
+</div>
+
+	<!--Gallery Title start-->
+	<div class="row gallery" *ngIf="gallery_display">
+   <div class="col-sm-6 galleryTitle" *ngFor= "let gal of albumResult" (click)="getId(gal.userId)"><h1>{{gal.userId}}</h1> {{gal.title}}
+   </div>
+	</div>
+	<!--Gallery Title end-->
+
+   <!--thumbnail start-->
+<div class="gallerize-example thumbnail" *ngIf="thumbnail_display">
+	<div  gallerize>
+		<div class="row">
+			<div class="col-sm-8">
+		<button class="btn btn-warning btn-lg"  (click)="lightbox.open(0, 'lightbox', {panelClass: 'fullscreen'})">Open Thumbnail in fullscreen mode</button>
+			 </div>
+			 <div class="col-sm-4"> 
+		<button class="btn btn-info btn-lg" style="float:right" (click)="back()">Back</button>
+		     </div>
+	    </div>
+		<img *ngFor="let img of searchResult | paginate: { itemsPerPage: 8, currentPage: p }" style="width:100%" [src]="img.url" class="col-sm-3 img-responsive" style="padding:15px;">
+	</div>
+	<pagination-controls (pageChange)="p = $event" class="pagination"></pagination-controls>
+</div>
+    <!--thumbnail end-->

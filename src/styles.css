@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+.g-overlay {
+    margin: auto;
+    justify-content: center;
+    display: flex;
+}
+.galleryTitle{
+font-size: 16px;
+    font-weight: bold;
+    padding: 15px;
+    border: solid #ffc107 2px;
+    border-collapse: collapse;
+    color:#d39e00;
+    margin-top:20px;
+}
+.thumbnail{
+margin-top: 30px;
+}
+.gallery{
+    margin-bottom:20px;
+}
+.pagination{
+    display:flex;
+    justify-content: center;
+    margin-top:20px;
+}
+.title{
+    background-image: linear-gradient(180deg, #ffc107, #d39e00);
+    text-align: center;
+    padding: 10px;
+    color: #e8f7099e;
+    text-shadow: 1px 1px;
+    font-weight: bold;
+    font-size: 30px;
+}
